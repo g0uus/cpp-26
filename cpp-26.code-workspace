@@ -1,0 +1,23 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            ".clang-format": "yaml",
+            "*.dbclient-js": "javascript",
+            "print": "cpp",
+            "concepts": "cpp",
+            "variant": "cpp"
+        },
+        "makefile.launchConfigurations": [
+            {
+                "cwd": "/home/graham/Documents/Projects/cpp/cpp-26",
+                "binaryPath": "/home/graham/Documents/Projects/cpp/cpp-26/main",
+                "binaryArgs": []
+            }
+        ]
+    }
+}
