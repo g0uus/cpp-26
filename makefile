@@ -5,25 +5,24 @@
 CPP_FLAGS = --std=c++26 -g -o0 -Wall -Wextra -pedantic
 
 SOURCES = main.cpp
-OBJECTS = main.o
-
-TARGET = main
+OBJECTS = cpp-26.o
+TARGET = cpp-26
 
 
 all: ${TARGET}
 
 
-main.o : main.cpp concept1.h concept2.h grh_version.h picture1.h
-	g++ -c ${CPP_FLAGS} -o main.o main.cpp
+cpp-26.o : main.cpp concept1.h concept2.h grh_version.h picture1.h
+	g++ -c ${CPP_FLAGS} -o cpp-26.o main.cpp
 
 
 picture1.h : GeoObj.h
 
-main: main.o
-	g++ ${CPP_FLAGS} -o ${TARGET} main.o
+cpp-26: ${OBJECTS}
+	g++ ${CPP_FLAGS} -o ${TARGET} ${OBJECTS}
 
 clean:
 	rm -rf ${TARGET} ${OBJECTS}
 
-run: clean main
-	./main
+run: clean ${TARGET}
+	./${TARGET}

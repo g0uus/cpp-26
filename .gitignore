@@ -1,2 +1,3 @@
-main
-main.o
+# Ignore compiled object files
+cpp-26.o
+cpp-26
