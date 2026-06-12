@@ -6,6 +6,7 @@
 //
 #include <iostream>
 #include <print>
+#include <cmath>
 #include "concept1.h"
 #include "concept2.h"
 #include "picture.h"
@@ -45,17 +46,18 @@ int concept1()
 
 void concept2()
 {
-    myContainer<std::string> c1("Hello World");
+    myContainer<std::string> c1("Hello Concepts!");
     myContainer<int> c2(42);
-    myContainer<double> c3(3.14);
+    myContainer<double> c3(M_PI);
 
     std::cout << c1.get() << '\n';
     std::cout << c2.get() << '\n';
     std::cout << c3.get() << '\n';
 
-    myContainer<float> c4(3.14f); // Error: no matching function for call to 'myContainer<float>::get() const'
+    myContainer<float> c4(M_PIf); // Error: no matching function for call to 'myContainer<float>::get() const'
     //const auto x = c4.get();
-   // std::cout << c4.get() << '\n';
+    std::cout << c4.get() << '\n';
+
 }
 
 void PicTest()

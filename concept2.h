@@ -17,21 +17,19 @@ public:
     //const T &get() const { return value; }
 
     const std::string_view get() const
-        requires std::same_as<T, std::string>
+        requires std::same_as<T, std::string> || std::same_as<T, std::string_view>
     {
         return value;
     }
 
     int get() const
         requires std::same_as<T, int>
-
     {
         return value;
     }
 
     double get() const
-        requires std::same_as<T, double>
-
+        requires std::same_as<T, double> || std::same_as<T, float>
     {
         return value;
     }
